@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cdvDelivery"
+    android:layout_width="390dp"
+    android:layout_height="100dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imvIcon1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imvIcon2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/fr" />
+
+        <ImageView
+            android:id="@+id/imvIcon2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imvIcon3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imvIcon1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/k" />
+
+        <ImageView
+            android:id="@+id/imvIcon3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imvIcon4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imvIcon2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ve" />
+
+        <ImageView
+            android:id="@+id/imvIcon4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imvIcon5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imvIcon3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ye" />
+
+        <ImageView
+            android:id="@+id/imvIcon5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imvIcon4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/z" />
+
+        <TextView
+            android:id="@+id/txvFr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imvIcon1" />
+
+        <TextView
+            android:id="@+id/txvK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+            app:layout_constraintStart_toEndOf="@+id/txvFr"
+            app:layout_constraintTop_toTopOf="@+id/txvFr" />
+
+        <TextView
+            android:id="@+id/txvVe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+            app:layout_constraintStart_toEndOf="@+id/txvK"
+            app:layout_constraintTop_toTopOf="@+id/txvFr"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txvYe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+            app:layout_constraintStart_toEndOf="@+id/txvVe"
+            app:layout_constraintTop_toTopOf="@+id/txvFr"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/txvZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+            app:layout_constraintStart_toEndOf="@+id/txvYe"
+            app:layout_constraintTop_toTopOf="@+id/txvFr"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

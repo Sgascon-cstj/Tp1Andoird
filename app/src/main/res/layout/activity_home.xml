@@ -4,15 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
     tools:context=".presentation.home.HomeActivity">
 
-    <TextView
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/consortium" />
 
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/screen_background_light"
+        android:ems="10"
+        android:hint="Nom du commeçant"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdvDelivery"
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="384dp"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imvIcon1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imvIcon2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/fr" />
+
+            <ImageView
+                android:id="@+id/imvIcon2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imvIcon3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imvIcon1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/k" />
+
+            <ImageView
+                android:id="@+id/imvIcon3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imvIcon4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imvIcon2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/ve" />
+
+            <ImageView
+                android:id="@+id/imvIcon4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imvIcon5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imvIcon3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ye" />
+
+            <ImageView
+                android:id="@+id/imvIcon5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imvIcon4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/z" />
+
+            <TextView
+                android:id="@+id/txvFr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imvIcon1" />
+
+            <TextView
+                android:id="@+id/txvK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+                app:layout_constraintStart_toEndOf="@+id/txvFr"
+                app:layout_constraintTop_toTopOf="@+id/txvFr" />
+
+            <TextView
+                android:id="@+id/txvVe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+                app:layout_constraintStart_toEndOf="@+id/txvK"
+                app:layout_constraintTop_toTopOf="@+id/txvFr"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txvYe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+                app:layout_constraintStart_toEndOf="@+id/txvVe"
+                app:layout_constraintTop_toTopOf="@+id/txvFr"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txvZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/txvFr"
+                app:layout_constraintStart_toEndOf="@+id/txvYe"
+                app:layout_constraintTop_toTopOf="@+id/txvFr"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnTeleverser"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="TÉLÉVERSER"
+        app:icon="@drawable/baseline_cloud_upload_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnChargement"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="CHARGEMENT"
+        app:icon="@drawable/baseline_sync_24"
+        app:layout_constraintBottom_toTopOf="@+id/btnTeleverser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="OUVRIR"
+        app:icon="@drawable/baseline_door_sliding_24"
+        app:layout_constraintBottom_toTopOf="@+id/btnChargement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
