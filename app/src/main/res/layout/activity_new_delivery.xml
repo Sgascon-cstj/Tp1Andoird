@@ -18,62 +18,199 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imvElement1"
         android:layout_width="84dp"
         android:layout_height="79dp"
-        android:layout_marginTop="128dp"
-        app:layout_constraintEnd_toStartOf="@+id/slider"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toStartOf="@+id/sldElement1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@drawable/fr" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imvElement2"
         android:layout_width="84dp"
         android:layout_height="79dp"
-        android:layout_marginTop="240dp"
-        app:layout_constraintEnd_toStartOf="@+id/slider2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/txvNameElement1"
+        app:srcCompat="@drawable/k" />
+
+    <ImageView
+        android:id="@+id/imvElement3"
+        android:layout_width="84dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvNameElement2"
+        app:srcCompat="@drawable/ve" />
+
+    <ImageView
+        android:id="@+id/imvElement4"
+        android:layout_width="84dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvNameElement3"
+        app:srcCompat="@drawable/ye" />
+
+    <ImageView
+        android:id="@+id/imvElement5"
+        android:layout_width="84dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvNameElement4"
+        app:srcCompat="@drawable/z" />
 
     <com.google.android.material.slider.Slider
-        android:id="@+id/slider"
+        android:id="@+id/sldElement1"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toStartOf="@+id/txvNumberElement1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imvElement1"
+        app:layout_constraintStart_toEndOf="@+id/imvElement1"
+        app:layout_constraintTop_toTopOf="@+id/imvElement1" />
 
     <com.google.android.material.slider.Slider
-        android:id="@+id/slider2"
+        android:id="@+id/sldElement2"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        tools:layout_editor_absoluteX="109dp" />
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imvElement2"
+        app:layout_constraintStart_toEndOf="@+id/imvElement2"
+        app:layout_constraintTop_toTopOf="@+id/imvElement2" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldElement3"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imvElement3"
+        app:layout_constraintStart_toEndOf="@+id/imvElement3"
+        app:layout_constraintTop_toTopOf="@+id/imvElement3" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldElement4"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imvElement4"
+        app:layout_constraintStart_toEndOf="@+id/imvElement4"
+        app:layout_constraintTop_toTopOf="@+id/imvElement4" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldElement5"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imvElement5"
+        app:layout_constraintStart_toEndOf="@+id/imvElement5"
+        app:layout_constraintTop_toTopOf="@+id/imvElement5" />
 
     <TextView
         android:id="@+id/txvNumberElement1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/slider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/slider"
-        app:layout_constraintTop_toTopOf="@+id/slider" />
+        app:layout_constraintBottom_toBottomOf="@+id/sldElement1"
+        app:layout_constraintStart_toEndOf="@+id/sldElement1"
+        app:layout_constraintTop_toTopOf="@+id/sldElement1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txvNumberElement2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="6dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/slider2"
-        app:layout_constraintStart_toEndOf="@+id/slider2"
-        app:layout_constraintTop_toTopOf="@+id/slider2" />
+        app:layout_constraintBottom_toBottomOf="@+id/sldElement2"
+        app:layout_constraintStart_toEndOf="@+id/sldElement2"
+        app:layout_constraintTop_toTopOf="@+id/sldElement2" />
+
+    <TextView
+        android:id="@+id/txvNumberElement3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/sldElement3"
+        app:layout_constraintStart_toEndOf="@+id/sldElement3"
+        app:layout_constraintTop_toTopOf="@+id/sldElement3" />
+
+    <TextView
+        android:id="@+id/txvNumberElement4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/sldElement4"
+        app:layout_constraintStart_toEndOf="@+id/sldElement4"
+        app:layout_constraintTop_toTopOf="@+id/sldElement4" />
+
+    <TextView
+        android:id="@+id/txvNumberElement5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/sldElement5"
+        app:layout_constraintStart_toEndOf="@+id/sldElement5"
+        app:layout_constraintTop_toTopOf="@+id/sldElement5" />
+
+    <TextView
+        android:id="@+id/txvNameElement1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Froynyx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvElement1" />
+
+    <TextView
+        android:id="@+id/txvNameElement2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Kreotrium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvElement2" />
+
+    <TextView
+        android:id="@+id/txvNameElement3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Vethynx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvElement3" />
+
+    <TextView
+        android:id="@+id/txvNameElement4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Yefrium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvElement4" />
+
+    <TextView
+        android:id="@+id/txvNameElement5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Zuscum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvElement5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

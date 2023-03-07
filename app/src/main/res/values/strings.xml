@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Consortium</string>
     <string name="delivery">Livraison</string>
+    <string name="nom_du_commercant">Nom du commercant</string>
 </resources>

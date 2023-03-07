@@ -25,13 +25,13 @@
         android:layout_marginTop="16dp"
         android:background="@android:drawable/screen_background_light"
         android:ems="10"
-        android:hint="Nom du commeçant"
+        android:hint="@string/nom_du_commercant"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <?xml version="1.0" encoding="utf-8"?>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cdvDelivery"
         android:layout_width="390dp"
@@ -80,7 +80,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imvIcon2"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/ve" />
+                app:srcCompat="@drawable/ve" />
 
             <ImageView
                 android:id="@+id/imvIcon4"
@@ -185,7 +185,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnOpen"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
