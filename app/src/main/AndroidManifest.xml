@@ -12,10 +12,10 @@
         android:theme="@style/Theme.Consortium"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.NewDelivery.NewDeliveryActivity"
+            android:name=".presentation.newDelivery.NewDeliveryActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.Delivery.DeliveriesActivity"
+            android:name=".presentation.delivery.DeliveriesActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.home.HomeActivity"

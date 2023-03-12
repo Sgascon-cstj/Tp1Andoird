@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Consortium</string>
-    <string name="delivery">Livraison</string>
-    <string name="nom_du_commercant">Nom du commercant</string>
+    <string name="app_name" >Consortium</string>
+    <string name="delivery">delivery</string>
+    <string name="name">Trader name</string>
+    <string name="upload">UPLOAD</string>
+    <string name="loading">LOADING</string>
+    <string name="open">OPEN</string>
+    <string name="welcomBack">Welcome back %s</string>
 </resources>

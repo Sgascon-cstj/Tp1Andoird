@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Consortium</string>
+    <string name="delivery">Livraison</string>
+    <string name="name">Nom du commerçant</string>
+    <string name="upload">TÉLÉVERSER</string>
+    <string name="loading">CHARGEMENT</string>
+    <string name="open">OUVRIR</string>
+    <string name="welcomBack">Bon retour %s</string>
+</resources>

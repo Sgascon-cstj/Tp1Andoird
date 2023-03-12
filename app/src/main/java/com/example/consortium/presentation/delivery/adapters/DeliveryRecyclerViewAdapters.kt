@@ -1,4 +1,4 @@
-package com.example.consortium.presentation.Delivery.adapters
+package com.example.consortium.presentation.delivery.adapters
 
 import android.view.LayoutInflater
 import android.view.View
