@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
+import com.example.consortium.R
+import com.example.consortium.core.Constants.dataStore
 
 import com.example.consortium.databinding.ActivityHomeBinding
 import com.example.consortium.presentation.delivery.DeliveriesActivity
@@ -23,11 +25,11 @@ class HomeActivity : AppCompatActivity() {
             when(it){
                 HomeUiState.Empty -> Unit
                 is HomeUiState.Success ->{
-                    binding.txvFr.text = it.trader.froynyx.toString()
-                    binding.txvK.text = it.trader.kreotrium.toString()
-                    binding.txvVe.text = it.trader.vethynx.toString()
-                    binding.txvYe.text = it.trader.yerfrium.toString()
-                    binding.txvZ.text = it.trader.zuscum.toString()
+                    binding.txvFr.text = String.format("%.2f", it.trader.froynyx)
+                    binding.txvK.text = String.format("%.2f", it.trader.kreotrium)
+                    binding.txvVe.text = String.format("%.2f", it.trader.vethynx)
+                    binding.txvYe.text = String.format("%.2f", it.trader.yerfrium)
+                    binding.txvZ.text = String.format("%.2f", it.trader.zuscum)
                     binding.txtName.setText(it.trader.name)
                 }
             }
@@ -38,23 +40,26 @@ class HomeActivity : AppCompatActivity() {
                 viewModel.save()
                 startActivity(DeliveriesActivity.newIntent(this))
             }else{
-                Toast.makeText(this,"Username is empty",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.emptyUserName),Toast.LENGTH_SHORT).show()
             }
         }
         binding.btnChargement.setOnClickListener{
             if (binding.txtName.text.isNotEmpty())
             {
                 viewModel.recharge()
+                Toast.makeText(this, getString(R.string.rechargeComplete), Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this,"Username is empty",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.emptyUserName),Toast.LENGTH_SHORT).show()
             }
         }
         binding.btnTeleverser.setOnClickListener{
             if (binding.txtName.text.isNotEmpty())
             {
                 viewModel.upload()
+                Toast.makeText(this, getString(R.string.uploadComplete), Toast.LENGTH_SHORT).show()
+
             }else{
-                Toast.makeText(this,"Username is empty",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.emptyUserName),Toast.LENGTH_SHORT).show()
             }
         }
     }

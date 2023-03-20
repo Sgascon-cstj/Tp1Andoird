@@ -8,7 +8,7 @@ import com.example.consortium.R
 import com.example.consortium.databinding.ItemDeliveryBinding
 import com.example.consortium.domain.models.Delivery
 
-class DeliveryRecyclerViewAdapters (val deliveries: List<Delivery> = listOf()) :
+class DeliveryRecyclerViewAdapters (var deliveries: List<Delivery> = listOf()) :
     RecyclerView.Adapter<DeliveryRecyclerViewAdapters.ViewHolder>(){
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -29,7 +29,11 @@ class DeliveryRecyclerViewAdapters (val deliveries: List<Delivery> = listOf()) :
         private val binding = ItemDeliveryBinding.bind(view)
 
         fun bind(delivery: Delivery){
-
+            binding.txvFr.text = String.format("%.2f", delivery.froynyx)
+            binding.txvK.text = String.format("%.2f", delivery.kreotrium)
+            binding.txvVe.text = String.format("%.2f", delivery.vethynx)
+            binding.txvYe.text = String.format("%.2f", delivery.yerfrium)
+            binding.txvZ.text = String.format("%.2f", delivery.zuscum)
         }
 
     }

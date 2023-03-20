@@ -1,6 +1,7 @@
 package com.example.consortium.presentation.newDelivery
 
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.consortium.core.AppDatabase
@@ -35,18 +36,31 @@ class NewDeliveriesViewModel(application: Application) : AndroidViewModel(applic
         }
     }
     fun save(fr: Float, k:Float,ve:Float, ye:Float, z:Float){
-        val delivery = Delivery(fr,k,ve,ye,z)
-        viewModelScope.launch {
-
-            deliveryRepository.insert(delivery)
-            _newDeliveriesUiState.update {
-                NewDeliveriesUiState.Completed
+        if (fr <= 0 && k <= 0 && ve <= 0 && ye <= 0 && z <= 0){
+            viewModelScope.launch {
+                _newDeliveriesUiState.update {
+                    NewDeliveriesUiState.Error
+                }
             }
-        }
-        viewModelScope.launch {
-            traderRepository.saveNewDelivery(delivery)
-            _newDeliveriesUiState.update {
-                NewDeliveriesUiState.Completed
+        }else {
+            val delivery = Delivery(fr, k, ve, ye, z)
+            viewModelScope.launch {
+
+                deliveryRepository.insert(delivery)
+                _newDeliveriesUiState.update {
+                    NewDeliveriesUiState.Completed
+                }
+            }
+            viewModelScope.launch {
+                currentTrader.froynyx -= fr
+                currentTrader.kreotrium -= k
+                currentTrader.vethynx -= ve
+                currentTrader.yerfrium -= ye
+                currentTrader.zuscum -= z
+                traderRepository.save(currentTrader)
+                _newDeliveriesUiState.update {
+                    NewDeliveriesUiState.Completed
+                }
             }
         }
     }

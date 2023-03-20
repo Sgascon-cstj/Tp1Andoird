@@ -59,13 +59,5 @@ class TraderRepository(private val context: Context){
             it[PreferencesKeys.QUANTITY_ELEMENT_Z] = 200.0f
         }
     }
-    suspend fun saveNewDelivery(delivery: Delivery){
-        context.dataStore.edit {
-            it[PreferencesKeys.QUANTITY_ELEMENT_FR]?.minus(delivery.froynyx.toFloat())
-            it[PreferencesKeys.QUANTITY_ELEMENT_K]?.minus(delivery.kreotrium.toFloat())
-            it[PreferencesKeys.QUANTITY_ELEMENT_VE]?.minus(delivery.vethynx.toFloat())
-            it[PreferencesKeys.QUANTITY_ELEMENT_YE]?.minus(delivery.yerfrium.toFloat())
-            it[PreferencesKeys.QUANTITY_ELEMENT_Z]?.minus(delivery.zuscum.toFloat())
-        }
-    }
+
 }

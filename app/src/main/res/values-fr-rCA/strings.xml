@@ -7,4 +7,9 @@
     <string name="loading">CHARGEMENT</string>
     <string name="open">OUVRIR</string>
     <string name="welcomBack">Bon retour %s</string>
+    <string name="emptyUserName">Nom d\'utlisateur est vide</string>
+    <string name="rechargeComplete">Chargement complèté</string>
+    <string name="uploadComplete">Téléversement éffectué</string>
+    <string name="deliverySaved">Livraison enregistré</string>
+    <string name="errorElementGreaterThanOne">Le nombre d\'élément doit être d\'au moins un pour au moins un élément</string>
 </resources>

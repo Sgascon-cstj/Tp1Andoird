@@ -6,4 +6,9 @@
     <string name="loading">LOADING</string>
     <string name="open">OPEN</string>
     <string name="welcomBack">Welcome back %s</string>
+    <string name="emptyUserName">Username is empty</string>
+    <string name="rechargeComplete">"Recharge complete"</string>
+    <string name="uploadComplete">Upload complete"</string>
+    <string name="deliverySaved">"Delivery saved"</string>
+    <string name="errorElementGreaterThanOne">The number of element should be greater than 0.5 for a least one element</string>
 </resources>

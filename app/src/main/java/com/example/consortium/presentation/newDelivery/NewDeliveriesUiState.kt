@@ -7,4 +7,6 @@ sealed class NewDeliveriesUiState {
     class Success( val trader: Trader) : NewDeliveriesUiState()
     object Completed : NewDeliveriesUiState()
     object Empty : NewDeliveriesUiState()
+
+    object Error : NewDeliveriesUiState()
 }
